@@ -17,3 +17,15 @@ h2{margin:3.2rem 0 1rem;padding:0;color:var(--heading);font-size:1.42rem;letter-
 @media(max-width:430px){.quick-facts,.assessment-grid,.tool-grid{grid-template-columns:1fr}}
 /* Course project navigation and cards */
 .nav-project-title{margin-top:.65rem}.final-project-timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}.timeline-card{padding:1.1rem;border:1px solid var(--border);border-radius:14px;background:var(--surface);box-shadow:var(--shadow)}.timeline-card span{display:block;margin-bottom:.25rem;color:var(--accent);font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}.timeline-card strong{display:block;margin-bottom:.35rem;color:var(--heading)}.timeline-card p{margin:0;color:var(--muted);font-size:.82rem}.schedule-wrap td a{color:var(--text);text-decoration:none}.schedule-wrap td a:hover{color:var(--accent)}@media(max-width:800px){.final-project-timeline{grid-template-columns:1fr}}
+
+/* Homepage simplification */
+.quick-facts{grid-template-columns:repeat(3,1fr)}
+.schedule-simple{max-width:560px}
+.schedule-simple table{font-size:1rem}
+.schedule-simple th{font-size:.76rem}
+.schedule-simple th,.schedule-simple td{padding:.8rem 1rem}
+.schedule-simple td:first-child{width:55%}
+.schedule-simple .assessment-date td{font-weight:800;color:var(--accent)}
+.schedule-simple .assessment-date{background:color-mix(in srgb,var(--soft) 72%,var(--surface))}
+@media(max-width:800px){.quick-facts{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.quick-facts{grid-template-columns:1fr}.schedule-simple{max-width:none}}
