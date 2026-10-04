@@ -18,15 +18,24 @@ h2{margin:3.2rem 0 1rem;padding:0;color:var(--heading);font-size:1.42rem;letter-
 /* Course project navigation and cards */
 .nav-project-title{margin-top:.65rem}.final-project-timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0}.timeline-card{padding:1.1rem;border:1px solid var(--border);border-radius:14px;background:var(--surface);box-shadow:var(--shadow)}.timeline-card span{display:block;margin-bottom:.25rem;color:var(--accent);font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}.timeline-card strong{display:block;margin-bottom:.35rem;color:var(--heading)}.timeline-card p{margin:0;color:var(--muted);font-size:.82rem}.schedule-wrap td a{color:var(--text);text-decoration:none}.schedule-wrap td a:hover{color:var(--accent)}@media(max-width:800px){.final-project-timeline{grid-template-columns:1fr}}
 
-/* Homepage simplification */
+
+/* Homepage schedule — aligned with the GIR course site */
 .quick-facts{grid-template-columns:repeat(3,1fr)}
-.schedule-simple{width:100%;max-width:none}
-.schedule-simple table{width:100%;font-size:.92rem;table-layout:fixed}
-.schedule-simple th,.schedule-simple td{padding:.78rem 1rem}
-.schedule-simple th:nth-child(1),.schedule-simple td:nth-child(1){width:18%}
-.schedule-simple th:nth-child(2),.schedule-simple td:nth-child(2){width:18%}
-.schedule-simple th:nth-child(3),.schedule-simple td:nth-child(3){width:64%}
-.schedule-simple .assessment-date td{font-weight:800;color:var(--accent)}
-.schedule-simple .assessment-date{background:color-mix(in srgb,var(--soft) 72%,var(--surface))}
+.schedule-gir{width:100%;max-width:none}
+.schedule-gir table{width:100%;table-layout:fixed;font-size:.92rem}
+.schedule-gir th,.schedule-gir td{padding:.68rem .85rem}
+.schedule-gir th:nth-child(1),.schedule-gir td:nth-child(1){width:18%}
+.schedule-gir th:nth-child(2),.schedule-gir td:nth-child(2){width:16%}
+.schedule-gir th:nth-child(3),.schedule-gir td:nth-child(3){width:66%}
+.schedule-gir tbody tr:nth-child(even){background:var(--panel)}
+.schedule-gir tbody tr:nth-child(odd){background:var(--surface)}
+.schedule-gir tbody tr:hover{background:color-mix(in srgb,var(--soft) 50%,var(--surface))}
+.schedule-gir td a{color:var(--text);text-decoration:none}
+.schedule-gir td a:hover{color:var(--accent);text-decoration:none}
+.schedule-gir .schedule-highlight td{color:var(--accent);font-weight:800}
+.schedule-gir .schedule-highlight a{color:var(--accent);font-weight:800}
+.schedule-accent{color:var(--accent);font-weight:800}
+.no-makeup{margin:.55rem .2rem 0;text-align:right;color:#c51f1f;font-size:1rem;font-style:italic}
+[data-theme="dark"] .no-makeup{color:#ff7a7a}
 @media(max-width:800px){.quick-facts{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:560px){.quick-facts{grid-template-columns:1fr}.schedule-simple table{table-layout:auto}.schedule-simple th:nth-child(1),.schedule-simple td:nth-child(1),.schedule-simple th:nth-child(2),.schedule-simple td:nth-child(2),.schedule-simple th:nth-child(3),.schedule-simple td:nth-child(3){width:auto}}
+@media(max-width:560px){.quick-facts{grid-template-columns:1fr}.schedule-gir table{table-layout:auto}.schedule-gir th:nth-child(1),.schedule-gir td:nth-child(1),.schedule-gir th:nth-child(2),.schedule-gir td:nth-child(2),.schedule-gir th:nth-child(3),.schedule-gir td:nth-child(3){width:auto}}
