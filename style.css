@@ -20,12 +20,13 @@ h2{margin:3.2rem 0 1rem;padding:0;color:var(--heading);font-size:1.42rem;letter-
 
 /* Homepage simplification */
 .quick-facts{grid-template-columns:repeat(3,1fr)}
-.schedule-simple{max-width:560px}
-.schedule-simple table{font-size:1rem}
-.schedule-simple th{font-size:.76rem}
-.schedule-simple th,.schedule-simple td{padding:.8rem 1rem}
-.schedule-simple td:first-child{width:55%}
+.schedule-simple{width:100%;max-width:none}
+.schedule-simple table{width:100%;font-size:.92rem;table-layout:fixed}
+.schedule-simple th,.schedule-simple td{padding:.78rem 1rem}
+.schedule-simple th:nth-child(1),.schedule-simple td:nth-child(1){width:18%}
+.schedule-simple th:nth-child(2),.schedule-simple td:nth-child(2){width:18%}
+.schedule-simple th:nth-child(3),.schedule-simple td:nth-child(3){width:64%}
 .schedule-simple .assessment-date td{font-weight:800;color:var(--accent)}
 .schedule-simple .assessment-date{background:color-mix(in srgb,var(--soft) 72%,var(--surface))}
 @media(max-width:800px){.quick-facts{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:560px){.quick-facts{grid-template-columns:1fr}.schedule-simple{max-width:none}}
+@media(max-width:560px){.quick-facts{grid-template-columns:1fr}.schedule-simple table{table-layout:auto}.schedule-simple th:nth-child(1),.schedule-simple td:nth-child(1),.schedule-simple th:nth-child(2),.schedule-simple td:nth-child(2),.schedule-simple th:nth-child(3),.schedule-simple td:nth-child(3){width:auto}}
