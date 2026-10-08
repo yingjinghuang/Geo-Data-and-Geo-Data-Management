@@ -70,6 +70,21 @@ if (weekContent) {
       <li>A logical dataset is different from the file, database, API, or service used to store or access it.</li>
     </ul>
 
+    <h2>Lecture slides &amp; lab notebook</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Week 1 lecture slides</h3>
+        <p>40-slide course introduction and geodata overview (PDF).</p>
+        <p><a class="resource" href="slides/Week1_Introduction.pdf" target="_blank" rel="noopener">View / download slides (PDF) ↗</a></p>
+      </div>
+      <div class="card">
+        <h3>Week 1 lab notebook</h3>
+        <p>Acquire, load and visualize vector, raster, trajectory and point-cloud data.</p>
+        <p><a class="resource" href="notebooks/Week1_geodata_inventory.ipynb" download>Download notebook (.ipynb) ↓</a></p>
+      </div>
+    </div>
+    <p class="muted">Open the notebook using the IT_Geo kernel in JupyterHub. Moodle is used for checkpoint submissions.</p>
+
     <h2>Lab: Acquire, load, and visualize geodata</h2>
     <p>In the first lab we repeat the same simple workflow across four examples:</p>
     <div class="card-grid">
