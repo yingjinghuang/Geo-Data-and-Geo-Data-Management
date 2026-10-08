@@ -19,7 +19,74 @@ if (weekContent) {
   const number = Number(document.body.dataset.week);
   const summary = weeks[number - 1];
   document.title = `Week ${number}: ${summary[0]} · Geo-Data 2026W`;
-  weekContent.innerHTML = `
+  const weekOneContent = `
+    <header class="hero">
+      <h1>Week 1: Geodata in the Wild</h1>
+      <p>What counts as geodata in the real world, and what do we need to know before using it?</p>
+    </header>
+
+    <div class="core-question">
+      <strong>Core idea</strong><br>
+      Geodata is a broad family of data with spatial meaning. This week we look across different sources and forms of geodata before focusing on particular representations in later weeks.
+    </div>
+
+    <h2>What we will do</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Geodata in the Wild</h3>
+        <p>Explore examples including OpenStreetMap, remote-sensing imagery, street-level imagery, LiDAR and point clouds, GPS trajectories, and city open data.</p>
+      </div>
+      <div class="card">
+        <h3>Understand four different layers</h3>
+        <p>Separate <strong>source</strong>, <strong>information type</strong>, <strong>representation</strong>, and <strong>storage &amp; access</strong> instead of treating them as one flat list of “data types.”</p>
+      </div>
+      <div class="card">
+        <h3>Learn how to inspect unfamiliar geodata</h3>
+        <p>Ask what one observation represents, where its spatial meaning lives, what time and source information are available, what the fields mean, and what may be missing.</p>
+      </div>
+      <div class="card">
+        <h3>Start working in Jupyter</h3>
+        <p>Use the course Jupyter environment to acquire, load, inspect, and visualize several different forms of geodata.</p>
+      </div>
+    </div>
+
+    <h2>A useful framework</h2>
+    <div class="meta-grid">
+      <div class="meta-card"><strong>Source</strong><span>Where and how did the data originate?</span></div>
+      <div class="meta-card"><strong>Information type</strong><span>What information about the world is actually recorded?</span></div>
+      <div class="meta-card"><strong>Representation</strong><span>How is geographic meaning encoded computationally?</span></div>
+    </div>
+    <div class="callout">
+      <strong>Storage &amp; access</strong><br>
+      How is the information packaged, stored, or retrieved — for example as a file, database, API, service, or cloud resource?
+    </div>
+
+    <h2>Key takeaways</h2>
+    <ul>
+      <li>Geodata is not the same thing as a map, a file format, or a single data model.</li>
+      <li>One dataset can combine several kinds of information and can be described at several abstraction levels.</li>
+      <li>Vector and raster are foundational spatial representations, but they are not the whole geodata landscape.</li>
+      <li>Understanding the source and observation process is part of understanding the data.</li>
+      <li>A logical dataset is different from the file, database, API, or service used to store or access it.</li>
+    </ul>
+
+    <h2>Lab: Acquire, load, and visualize geodata</h2>
+    <p>In the first lab we repeat the same simple workflow across four examples:</p>
+    <div class="card-grid">
+      <div class="card"><h3>Vector polygons</h3><p>Load geographic features represented by polygon geometries and make a simple map.</p></div>
+      <div class="card"><h3>Raster imagery</h3><p>Open gridded image data and inspect how its values are displayed spatially.</p></div>
+      <div class="card"><h3>Trajectory data</h3><p>Work with ordered locations through space and time.</p></div>
+      <div class="card"><h3>3D point cloud</h3><p>Inspect a set of x, y, z observations representing three-dimensional structure.</p></div>
+    </div>
+    <div class="callout">
+      <strong>Lab workflow:</strong> acquire → load → inspect → visualize. The goal is not to memorize Python syntax, but to see how different geodata look once they are opened and inspected.
+    </div>
+
+    <h2>Checkpoint</h2>
+    <p>Choose one of the four data forms, change one parameter, rerun the visualization, and write a few short notes explaining what you changed and what happened. Save the notebook with the outputs visible and submit the completed <code>.ipynb</code> file through Moodle by the end of the day.</p>
+  `;
+
+  weekContent.innerHTML = number === 1 ? weekOneContent : `
     <header class="hero">
       <h1>Week ${number}: ${summary[0]}</h1>
       <p>${summary[1]}</p>
