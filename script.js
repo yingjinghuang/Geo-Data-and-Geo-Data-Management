@@ -1,8 +1,8 @@
 const weeks = [
   ['Geodata in the Wild', 'What counts as geodata in the real world, and what do we need to know before using it?'],
   ['Vector Data: Geometry and CRS', 'How can discrete geographic phenomena be represented as vector features, and why do coordinates need a CRS?'],
-  ['Raster Data: Grids, Georeferencing and Metadata', 'How can sampled fields and imagery become georeferenced raster data?'],
-  ['Relating Heterogeneous Geodata', 'How do we decide when records or vector features from different sources meaningfully correspond?'],
+  ['Vector Data Integration', 'How can we combine vector layers using joins and overlays?'],
+  ['Raster Data: Grids and Georeferencing', 'How do raster grids store geographic information, and how do we locate them on a map?'],
   ['Integrating Different Spatial Supports', 'How can grids, points and zones be related without losing spatial meaning?'],
   ['Midterm exam', 'Individual mastery of the foundations from Weeks 1–5.'],
   ['Geodata standards and interoperability', 'How can different systems agree on the structure and meaning of geodata?'],
@@ -29,6 +29,11 @@ if (weekContent) {
   `;
 }
 
+const shortWeekLabels = [
+  'Geodata', 'Vector & CRS', 'Vector Integration', 'Raster', 'Vector–Raster',
+  'Midterm', 'Standards', 'Storage', 'Spatial SQL', 'Reproducibility', 'Final Project'
+];
+
 const nav = document.getElementById('weekNav');
 if (nav) {
   const current = document.body.dataset.week;
@@ -36,13 +41,13 @@ if (nav) {
   nav.innerHTML = weeks.map((week, index) => {
     const number = index + 1;
     if (hiddenWeeks.has(number)) return '';
-    return `<a href="week${number}.html" class="${current == number ? 'active' : ''}"><span>W${number}</span>${week[0]}</a>`;
+    return `<a href="week${number}.html" class="${current == number ? 'active' : ''}" title="${week[0]}"><span>W${number}</span>${shortWeekLabels[index]}</a>`;
   }).join('');
 }
 const sidebarNav = document.querySelector('#sidebar nav');
 if (sidebarNav && !document.querySelector('.project-nav-added')) {
   const page = document.body.dataset.page || '';
-  sidebarNav.insertAdjacentHTML('beforeend', `<div class="project-nav-added"><div class="nav-title nav-project-title">Course Project</div><div class="week-nav"><a href="project-proposal.html" class="${page === 'project-proposal' ? 'active' : ''}"><span>PP</span>Project Proposal</a><a href="final-project.html" class="${page === 'final-project' ? 'active' : ''}"><span>FP</span>Final Project</a></div></div>`);
+  sidebarNav.insertAdjacentHTML('beforeend', `<div class="project-nav-added"><div class="nav-title nav-project-title">Course Project</div><div class="week-nav"><a href="project-proposal.html" class="${page === 'project-proposal' ? 'active' : ''}"><span>PP</span>Proposal</a><a href="final-project.html" class="${page === 'final-project' ? 'active' : ''}"><span>FP</span>Final Project</a></div></div>`);
 }
 if (weekContent && !weekContent.querySelector('.footer')) weekContent.insertAdjacentHTML('beforeend','<footer class="footer">Geo-Data and Geo-Data Management · University of Vienna · 2026W</footer>');
 
