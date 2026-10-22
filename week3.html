@@ -1,1 +1,69 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Week 3 · Geo-Data 2026W</title><link rel="stylesheet" href="style.css"></head><body data-week="3"><aside class="sidebar" id="sidebar"><div class="sidebar-header"><img src="img/uni_logo.png" alt="University of Vienna" class="sidebar-logo"><div class="eyebrow">VU Course</div><h2>Geo-Data and Geo-Data Management</h2><div class="semester">Winter Semester 2026</div></div><nav><div class="nav-title">Overview</div><a class="nav-home" href="index.html">Home</a><div class="nav-title">Lectures &amp; Labs</div><div class="week-nav" id="weekNav"></div></nav></aside><div class="backdrop" id="backdrop"></div><main class="main"><div class="topbar"><button class="icon-btn menu-toggle" id="menuToggle">☰</button><button class="icon-btn" id="themeToggle">☾</button></div><div class="content" id="weekContent"></div></main><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Week 3 of Geo-Data and Geo-Data Management: attribute joins, spatial joins, aggregation, and a Vienna geodata lab.">
+  <title>Week 3: Vector Data Integration · Geo-Data 2026W</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-week="3">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <img src="img/uni_logo.png" alt="University of Vienna" class="sidebar-logo">
+      <div class="eyebrow">VU Course</div>
+      <h2>Geo-Data and Geo-Data Management</h2>
+      <div class="semester">Winter Semester 2026</div>
+    </div>
+    <nav>
+      <div class="nav-title">Overview</div>
+      <a class="nav-home" href="index.html">Home</a>
+      <div class="nav-title">Lectures &amp; Labs</div>
+      <div class="week-nav" id="weekNav"></div>
+    </nav>
+  </aside>
+  <div class="backdrop" id="backdrop"></div>
+  <main class="main">
+    <div class="topbar">
+      <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle colour theme">☾</button>
+    </div>
+    <div class="content">
+      <header class="hero">
+        <h1>Week 3: Vector Data Integration</h1>
+        <p>How can we connect tables and spatial features, then summarize the results?</p>
+      </header>
+
+      <h2>Week Content</h2>
+      <p>This week uses a Vienna case study to bring together vector boundaries, population tables, and public-facility locations.</p>
+      <ul>
+        <li>Python basics and working step by step in Jupyter</li>
+        <li>Attribute joins: match records using a shared district ID</li>
+        <li>Spatial joins: assign points to districts by location</li>
+        <li>Aggregation: count matched points by district using GroupBy</li>
+      </ul>
+
+      <h2>Materials</h2>
+      <a class="resource" href="slides/Week3_Vector_Data_Integration.pdf">Lecture slides · PDF</a>
+      <a class="resource" href="code/week3/W03_Vienna_Lab.ipynb">Lab notebook · IPYNB</a>
+      <a class="resource" href="code/week3/W03_Vienna_Districts.geojson">District boundaries · GeoJSON</a>
+      <a class="resource" href="code/week3/W03_Vienna_Population_2025.csv">Population · CSV</a>
+      <a class="resource" href="code/week3/W03_Vienna_Drinking_Fountains.csv">Drinking fountains · CSV</a>
+      <a class="resource" href="code/week3/W03_Vienna_Public_Toilets.csv">Public toilets · CSV</a>
+
+      <h2>Lab</h2>
+      <p>Start with the required Python basics in Section 0. The guided part (Sections 1–5) follows our classroom example with Vienna districts, population, and drinking fountains. Additional maps and charts are <strong>optional</strong>.</p>
+      <p>For the independent checkpoint (Section 6), use the public-toilet data to create points, join them to districts, count facilities, and explain your results. Follow the steps in the notebook, one cell at a time.</p>
+
+      <h2>Lab Checkpoint</h2>
+      <div class="callout">
+        <strong>Submit the completed Week 3 notebook to Moodle.</strong>
+        <p>Keep the notebook and four data files in the same folder. Save your work with the outputs visible and submit your <code>.ipynb</code> file.</p>
+      </div>
+
+      <footer class="footer">Geo-Data and Geo-Data Management · University of Vienna · 2026W</footer>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
