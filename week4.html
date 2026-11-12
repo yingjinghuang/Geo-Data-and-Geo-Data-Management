@@ -1,1 +1,68 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Week 4 · Geo-Data 2026W</title><link rel="stylesheet" href="style.css"></head><body data-week="4"><aside class="sidebar" id="sidebar"><div class="sidebar-header"><img src="img/uni_logo.png" alt="University of Vienna" class="sidebar-logo"><div class="eyebrow">VU Course</div><h2>Geo-Data and Geo-Data Management</h2><div class="semester">Winter Semester 2026</div></div><nav><div class="nav-title">Overview</div><a class="nav-home" href="index.html">Home</a><div class="nav-title">Lectures &amp; Labs</div><div class="week-nav" id="weekNav"></div></nav></aside><div class="backdrop" id="backdrop"></div><main class="main"><div class="topbar"><button class="icon-btn menu-toggle" id="menuToggle">☰</button><button class="icon-btn" id="themeToggle">☾</button></div><div class="content" id="weekContent"></div></main><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Week 4 of Geo-Data and Geo-Data Management: raster grids, NoData, georeferencing, GeoTIFFs, elevation and land-cover analysis.">
+  <title>Week 4: Raster Data · Geo-Data 2026W</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-week="4">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <img src="img/uni_logo.png" alt="University of Vienna" class="sidebar-logo">
+      <div class="eyebrow">VU Course</div>
+      <h2>Geo-Data and Geo-Data Management</h2>
+      <div class="semester">Winter Semester 2026</div>
+    </div>
+    <nav>
+      <div class="nav-title">Overview</div>
+      <a class="nav-home" href="index.html">Home</a>
+      <div class="nav-title">Lectures &amp; Labs</div>
+      <div class="week-nav" id="weekNav"></div>
+    </nav>
+  </aside>
+  <div class="backdrop" id="backdrop"></div>
+  <main class="main">
+    <div class="topbar">
+      <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle colour theme">☾</button>
+    </div>
+    <div class="content">
+      <header class="hero">
+        <h1>Week 4: Raster Data</h1>
+        <p>How do raster grids store geographic information, and how do we locate them on a map?</p>
+      </header>
+
+      <h2>Week Content</h2>
+      <p>This week introduces raster data through small NumPy arrays before moving to georeferenced GeoTIFFs and real Vienna datasets.</p>
+      <ul>
+        <li>Raster grids, bands, cell size and spatial resolution</li>
+        <li>NoData values, validity masks and raster statistics</li>
+        <li>Origins, affine transforms, CRS, bounds and cell coordinates</li>
+        <li>Reading and writing GeoTIFFs with Rasterio</li>
+        <li>Continuous elevation data and categorical land-cover data</li>
+      </ul>
+
+      <h2>Materials</h2>
+      <a class="resource" href="slides/Week4_Raster_Data.pdf">Lecture slides · PDF</a>
+      <a class="resource" href="code/week4/W04_Vienna_Lab.ipynb">Lab notebook · IPYNB</a>
+      <a class="resource" href="code/week4/W04_Vienna_DEM_Clip.tif">Vienna DEM clip · GeoTIFF</a>
+      <a class="resource" href="code/week4/W04_Vienna_WorldCover_Clip.tif">Vienna WorldCover clip · GeoTIFF</a>
+
+      <h2>Lab</h2>
+      <p>Parts A and B reinforce the lecture workflow with a synthetic DEM and a real Vienna elevation raster. Keep the notebook and both GeoTIFF files in the same folder when working in JupyterHub.</p>
+      <p>Part C is the independent WorldCover exercise. Work through the notebook step by step: inspect metadata, build a valid-cell mask, calculate class counts and shares, identify the most common class, create a categorical map, and then write a short interpretation. Use the separate code cell provided for each stage.</p>
+
+      <h2>Lab Checkpoint</h2>
+      <div class="callout">
+        <strong>Submit the completed Week 4 notebook to Moodle.</strong>
+        <p>Save the notebook with your outputs visible. Your WorldCover section should include the requested metadata, class statistics, categorical map, and short interpretation.</p>
+      </div>
+
+      <footer class="footer">Geo-Data and Geo-Data Management · University of Vienna · 2026W</footer>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
