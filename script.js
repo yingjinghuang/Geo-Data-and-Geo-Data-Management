@@ -3,11 +3,11 @@ const weeks = [
   ['Vector Data: Geometry and CRS', 'How can discrete geographic phenomena be represented as vector features, and why do coordinates need a CRS?'],
   ['Vector Data Integration', 'How can we combine vector layers using joins and overlays?'],
   ['Raster Data: Grids and Georeferencing', 'How do raster grids store geographic information, and how do we locate them on a map?'],
-  ['Integrating Different Spatial Supports', 'How can grids, points and zones be related without losing spatial meaning?'],
+  ['Raster and Vector–Raster Integration', 'How can we join raster tiles, compare matching cells, and relate raster values to points and polygons?'],
   ['Midterm exam', 'Individual mastery of the foundations from Weeks 1–5.'],
   ['Geodata standards and interoperability', 'How can different systems agree on the structure and meaning of geodata?'],
   ['File-based geodata storage', 'How should the same logical geodata be packaged for different uses?'],
-  ['Spatial databases and SQL', 'When do related geodata become easier to manage as tables, relationships and queries rather than loose files?'],
+  ['Geodata Visualization', 'Detailed lecture content and lab materials will be published later.'],
   ['Reproducible geodata management', 'What makes geodata and a geodata workflow trustworthy, traceable and reusable?'],
   ['Final Project Presentations', 'How can a team communicate and defend a coherent GeoData project?']
 ];
@@ -31,7 +31,7 @@ if (weekContent) {
 
 const shortWeekLabels = [
   'Geodata', 'Vector & CRS', 'Vector Integration', 'Raster', 'Vector–Raster',
-  'Midterm', 'Standards', 'Storage', 'Spatial SQL', 'Reproducibility', 'Final Project'
+  'Midterm', 'Standards', 'Storage', 'Geodata Visualization', 'Reproducibility', 'Final Project'
 ];
 
 const nav = document.getElementById('weekNav');

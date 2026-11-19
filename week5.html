@@ -1,1 +1,75 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Week 5 · Geo-Data 2026W</title><link rel="stylesheet" href="style.css"></head><body data-week="5"><aside class="sidebar" id="sidebar"><div class="sidebar-header"><img src="img/uni_logo.png" alt="University of Vienna" class="sidebar-logo"><div class="eyebrow">VU Course</div><h2>Geo-Data and Geo-Data Management</h2><div class="semester">Winter Semester 2026</div></div><nav><div class="nav-title">Overview</div><a class="nav-home" href="index.html">Home</a><div class="nav-title">Lectures &amp; Labs</div><div class="week-nav" id="weekNav"></div></nav></aside><div class="backdrop" id="backdrop"></div><main class="main"><div class="topbar"><button class="icon-btn menu-toggle" id="menuToggle">☰</button><button class="icon-btn" id="themeToggle">☾</button></div><div class="content" id="weekContent"></div></main><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Week 5 of Geo-Data and Geo-Data Management: raster mosaics, differences, point sampling, zonal statistics, and land-cover shares across Vienna districts.">
+  <title>Week 5: Raster and Vector–Raster Integration · Geo-Data 2026W</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-week="5">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <img src="img/uni_logo.png" alt="University of Vienna" class="sidebar-logo">
+      <div class="eyebrow">VU Course</div>
+      <h2>Geo-Data and Geo-Data Management</h2>
+      <div class="semester">Winter Semester 2026</div>
+    </div>
+    <nav>
+      <div class="nav-title">Overview</div>
+      <a class="nav-home" href="index.html">Home</a>
+      <div class="nav-title">Lectures &amp; Labs</div>
+      <div class="week-nav" id="weekNav"></div>
+    </nav>
+  </aside>
+  <div class="backdrop" id="backdrop"></div>
+  <main class="main">
+    <div class="topbar">
+      <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle colour theme">☾</button>
+    </div>
+    <div class="content">
+      <header class="hero">
+        <h1>Week 5: Raster and Vector–Raster Integration</h1>
+        <p>How can we join raster tiles, compare matching cells, and relate raster values to points and polygons?</p>
+      </header>
+
+      <h2>Week Content</h2>
+      <p>This week connects raster and vector data through small synthetic examples, then applies the same methods to real Vienna land cover.</p>
+      <ul>
+        <li>Mosaics: check tile boundaries and alignment before joining arrays</li>
+        <li>Differences: compare matching cells that are valid in both rasters</li>
+        <li>Point sampling: look up raster values at specified locations</li>
+        <li>Zonal statistics: select valid cells and summarize them for each polygon</li>
+        <li>CRS, cell size, grid placement and NoData checks; statistics for continuous values and categories</li>
+      </ul>
+
+      <h2>Materials</h2>
+      <a class="resource" href="slides/Week5_Raster_VectorRaster_Integration.pdf">Lecture slides · PDF</a>
+      <a class="resource" href="code/week5/W05_Raster_VectorRaster_Integration_Lab.ipynb">Lab notebook · IPYNB</a>
+      <a class="resource" href="code/week5/W05_Vienna_WorldCover2021_10m.tif">Vienna WorldCover 2021 · GeoTIFF</a>
+      <a class="resource" href="code/week5/W05_Vienna_Districts_23.geojson">All 23 district boundaries · GeoJSON</a>
+
+      <h2>Lab</h2>
+      <p>Keep the notebook and both data files in the same folder when working in JupyterHub. Follow the cells in order and inspect each result before continuing.</p>
+      <p><strong>Guided A:</strong> use small synthetic grids to check adjacency, create a mosaic, calculate a difference, sample points and summarize zones. Compare how the default cell-inclusion rule and <code>all_touched</code> affect a polygon summary.</p>
+      <p><strong>Guided B:</strong> calculate the Built-up share for Leopoldstadt using ESA WorldCover 2021. Inspect the inputs, match their CRS, select the district and calculate the share using only its valid raster cells.</p>
+      <p><strong>Independent checkpoint (Part C):</strong> adapt the guided workflow to calculate Tree Cover shares for all 23 districts, check your results and explain the geographic differences.</p>
+
+      <h2>Lab Checkpoint</h2>
+      <div class="callout">
+        <strong>Submit the completed Week 5 notebook to Moodle.</strong>
+        <ul>
+          <li>Run Guided A and B and save the notebook with your computed outputs visible.</li>
+          <li>Complete C1–C3: produce one Tree Cover result per district, inspect the table, and re-extract one district from the original raster to verify its counts and percentage.</li>
+          <li>Answer C5a–C5c using your results: identify the highest and lowest shares and their difference in percentage points, compare two other districts, and suggest a possible geographic explanation plus additional data that could help check it.</li>
+        </ul>
+        <p>All supplied maps and charts, including C4, are <strong>optional</strong>. Plotting is not assessed. You can answer C5 using the C3 results table.</p>
+      </div>
+
+      <footer class="footer">Geo-Data and Geo-Data Management · University of Vienna · 2026W</footer>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
